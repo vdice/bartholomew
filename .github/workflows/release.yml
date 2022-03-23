@@ -17,7 +17,7 @@ jobs:
           release_name: ${{ github.ref }}
       - name: Upload bartholomew.wasm
         uses: actions/upload-release-asset@v1
-         with:
+        with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: "target/wasm32-wasi/release/bartholomew.wasm"
           asset_name: "bartholomew.wasm"
